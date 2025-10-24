@@ -18,7 +18,7 @@ def browser_size_window(width, height):
                                            (1280, 720), (900, 700), (650, 700), (380, 625)], )
 def test_github_desktop(browser_size_window, width, height):
     if width <= 1011:
-        pytest.skip('Проверяется только десктопное разрешение')
+        pytest.skip('Проверяется разрешения экранов только для десктопа и планшетов')
     else:
         browser.open('https://github.com/')
         browser.element('.//a[contains(text(), "Sign up")]').click()
