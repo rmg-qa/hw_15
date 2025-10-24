@@ -15,7 +15,7 @@ def browser_size_window(width, height):
 
 
 @pytest.mark.parametrize('width, height', [(1920, 1080), (1680, 1050), (1440, 1050),
-                                           (1280, 720), (900, 700), (650, 700), (380, 625)], )
+                                           (1280, 720), (900, 700), (650, 700), (380, 625)])
 def test_github_desktop(browser_size_window, width, height):
     if width <= 1011:
         pytest.skip('Проверяется разрешения экранов только для десктопа и планшетов')
@@ -26,7 +26,7 @@ def test_github_desktop(browser_size_window, width, height):
 
 
 @pytest.mark.parametrize('width, height', [(1920, 1080), (1680, 1050), (1440, 1050),
-                                           (1280, 720), (900, 700), (650, 700), (380, 625)], )
+                                           (1280, 720), (900, 700), (650, 700), (380, 625)])
 def test_github_mobile(browser_size_window, width, height):
     if width >= 1011:
         pytest.skip('Проверяется разрешение экрана только для мобильных устройств и планшетов')
